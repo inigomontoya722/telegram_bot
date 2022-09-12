@@ -35,28 +35,7 @@ if os.path.exists('data/boltun.txt'):
         if(len(x.strip()) > 2):
             mas.append(x.strip().lower())
     f.close()
-# С помощью fuzzywuzzy вычисляем наиболее похожую фразу и выдаем в качестве ответа следующий элемент списка
-def answer(text):
-    try:
-        text=text.lower().strip()
-        if os.path.exists('data/boltun.txt'):
-            a = 0
-            n = 0
-            nn = 0
-            for q in mas:
-                if('u: ' in q):
-                    # С помощью fuzzywuzzy получаем, насколько похожи две строки
-                    aa=(fuzz.token_sort_ratio(q.replace('u: ',''), text))
-                    if(aa > a and aa!= a):
-                        a = aa
-                        nn = n
-                n = n + 1
-            s = mas[nn + 1]
-            return s
-        else:
-            return 'Ошибка'
-    except:
-        return 'Ошибка'
+
 # Команда «Старт»
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
