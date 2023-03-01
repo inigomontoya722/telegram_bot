@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 # Создаем бота, пишем свой токен
-bot = telebot.TeleBot('5415338680:AAFlS_4HKhq5P5XxlWvcgvMmOtoJ6nYIrI0')
+bot = telebot.TeleBot('токен')
 # Загружаем список фраз и ответов в массив
 mas=[]
 if os.path.exists('data/boltun.txt'):
