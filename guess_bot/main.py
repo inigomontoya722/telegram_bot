@@ -26,15 +26,7 @@ def findAnime(file_path):
 
 
 # Создаем бота, пишем свой токен
-bot = telebot.TeleBot('5415338680:AAFlS_4HKhq5P5XxlWvcgvMmOtoJ6nYIrI0')
-# Загружаем список фраз и ответов в массив
-mas=[]
-if os.path.exists('data/boltun.txt'):
-    f=open('data/boltun.txt', 'r', encoding='UTF-8')
-    for x in f:
-        if(len(x.strip()) > 2):
-            mas.append(x.strip().lower())
-    f.close()
+bot = telebot.TeleBot('токен')
 
 # Команда «Старт»
 @bot.message_handler(commands=["start"])
